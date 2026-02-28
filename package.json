@@ -1,0 +1,35 @@
+{
+  "name": "tabpilot",
+  "version": "1.0.0",
+  "description": "Autopilot for your browser tabs. Smart grouping, instant search, optional AI — all local, all private.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "vue-tsc --noEmit"
+  },
+  "keywords": ["chrome-extension", "tab-manager", "tab-groups", "tab-organizer", "ai", "tabpilot"],
+  "author": "Florian",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "vue": "^3.5.29"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.3.0",
+    "@tailwindcss/forms": "^0.5.11",
+    "@types/chrome": "^0.1.37",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18",
+    "vue-tsc": "^3.2.5"
+  }
+}

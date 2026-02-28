@@ -1,0 +1,234 @@
+{
+  "extName": {
+    "message": "TabPilot",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "标签页自动驾驶。智能分组、即时搜索、可选 AI 增强 — 全部本地运行，隐私优先。",
+    "description": "Extension description"
+  },
+  "cmdOpenSearch": {
+    "message": "打开标签搜索",
+    "description": "Command to open the search overlay"
+  },
+  "groupTabs": {
+    "message": "一键分组",
+    "description": "Button label to group all tabs"
+  },
+  "ungroupAll": {
+    "message": "取消分组",
+    "description": "Button label to ungroup all tabs"
+  },
+  "searchPlaceholder": {
+    "message": "搜索标签...",
+    "description": "Search input placeholder"
+  },
+  "noTabs": {
+    "message": "没有找到打开的标签",
+    "description": "Empty state when no tabs"
+  },
+  "currentWindow": {
+    "message": "当前窗口",
+    "description": "Label for the currently focused browser window"
+  },
+  "windowLabel": {
+    "message": "窗口",
+    "description": "Label prefix for non-current browser windows"
+  },
+  "noResults": {
+    "message": "没有匹配的标签",
+    "description": "Empty state when no search results"
+  },
+  "settings": {
+    "message": "设置",
+    "description": "Settings link text"
+  },
+  "analyzingTabs": {
+    "message": "正在分析标签...",
+    "description": "Loading state text"
+  },
+  "openSearch": {
+    "message": "搜索",
+    "description": "Open search panel button"
+  },
+  "grouping": {
+    "message": "分组中...",
+    "description": "Button state while grouping"
+  },
+  "grouped": {
+    "message": "已分组",
+    "description": "Status when tabs are grouped"
+  },
+  "groups": {
+    "message": "个分组",
+    "description": "Groups count label"
+  },
+  "categorized": {
+    "message": "已分类",
+    "description": "Categorized count label"
+  },
+  "tabs": {
+    "message": "个标签",
+    "description": "Tabs count label"
+  },
+  "open": {
+    "message": "打开中",
+    "description": "Badge for open tabs in search"
+  },
+  "results": {
+    "message": "条结果",
+    "description": "Search results count label"
+  },
+  "typeToSearch": {
+    "message": "输入关键词搜索标签",
+    "description": "Empty search prompt"
+  },
+  "aiConfig": {
+    "message": "AI 配置",
+    "description": "AI settings section title"
+  },
+  "optional": {
+    "message": "可选",
+    "description": "Optional label"
+  },
+  "enableAI": {
+    "message": "启用 AI 增强分类",
+    "description": "AI toggle label"
+  },
+  "provider": {
+    "message": "服务商",
+    "description": "AI provider label"
+  },
+  "apiKey": {
+    "message": "API 密钥",
+    "description": "API key input label"
+  },
+  "endpoint": {
+    "message": "接口地址",
+    "description": "Custom endpoint label"
+  },
+  "model": {
+    "message": "模型",
+    "description": "Model input label"
+  },
+  "testConnection": {
+    "message": "测试连接",
+    "description": "Test connection button"
+  },
+  "testing": {
+    "message": "测试中...",
+    "description": "Testing connection state"
+  },
+  "connected": {
+    "message": "已连接",
+    "description": "Connection test success"
+  },
+  "failed": {
+    "message": "失败",
+    "description": "Connection test failure"
+  },
+  "save": {
+    "message": "保存设置",
+    "description": "Save button"
+  },
+  "saved": {
+    "message": "已保存",
+    "description": "Saved confirmation"
+  },
+  "apiKeyNote": {
+    "message": "你的 API 密钥仅存储在本地，除 AI 服务商外不会发送到任何服务器。",
+    "description": "API key privacy note"
+  },
+  "groupWork": {
+    "message": "工作",
+    "description": "Tab group label: Work"
+  },
+  "groupDev": {
+    "message": "开发",
+    "description": "Tab group label: Development"
+  },
+  "groupLearn": {
+    "message": "学习",
+    "description": "Tab group label: Learning"
+  },
+  "groupSocial": {
+    "message": "社交",
+    "description": "Tab group label: Social"
+  },
+  "groupMedia": {
+    "message": "娱乐",
+    "description": "Tab group label: Entertainment"
+  },
+  "groupShop": {
+    "message": "购物",
+    "description": "Tab group label: Shopping"
+  },
+  "groupDocs": {
+    "message": "文档",
+    "description": "Tab group label: Docs"
+  },
+  "groupOther": {
+    "message": "其他",
+    "description": "Tab group label: Other"
+  },
+  "shortcutTitle": {
+    "message": "快捷键",
+    "description": "Shortcut settings section title"
+  },
+  "changeShortcut": {
+    "message": "修改",
+    "description": "Button to open Chrome shortcut settings"
+  },
+  "closeGroup": {
+    "message": "关闭分组",
+    "description": "Button to close all tabs in a group"
+  },
+  "expandAll": {
+    "message": "展开全部",
+    "description": "Button to expand all groups in a window"
+  },
+  "collapseAll": {
+    "message": "折叠全部",
+    "description": "Button to collapse all groups in a window"
+  },
+  "hideGroupTitles": {
+    "message": "隐藏标签栏分组标题",
+    "description": "Button to hide group title text in Chrome tab bar"
+  },
+  "showGroupTitles": {
+    "message": "显示标签栏分组标题",
+    "description": "Button to show group title text in Chrome tab bar"
+  },
+  "displaySettings": {
+    "message": "显示设置",
+    "description": "Display settings section title"
+  },
+  "groupIndicatorStyle": {
+    "message": "分组指示器样式",
+    "description": "Group indicator style setting label"
+  },
+  "styleHeader": {
+    "message": "经典",
+    "description": "Classic style indicator option"
+  },
+  "styleBar": {
+    "message": "极简",
+    "description": "Minimal style indicator option"
+  },
+  "smartGroupTitle": {
+    "message": "智能分组标题",
+    "description": "Smart group title toggle label"
+  },
+  "smartGroupTitleDesc": {
+    "message": "始终保持分组标题可见，无论折叠或展开状态",
+    "description": "Smart group title toggle description"
+  },
+  "classifyNewTabs": {
+    "message": "归组新标签",
+    "description": "Button to classify new ungrouped tabs into existing AI groups"
+  },
+  "classifyingNewTabs": {
+    "message": "归组中...",
+    "description": "Button state while classifying new tabs"
+  }
+}

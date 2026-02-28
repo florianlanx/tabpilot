@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TabPilot</title>
+  <script>
+    // Synchronous theme init to prevent flash of wrong theme
+    (function() {
+      try {
+        var key = 'settings';
+        var raw = localStorage.getItem('atm_theme');
+        var theme = raw || 'system';
+        var isDark = theme === 'dark' ||
+          (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) document.documentElement.classList.add('dark');
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

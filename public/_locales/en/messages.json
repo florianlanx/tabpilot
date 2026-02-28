@@ -1,0 +1,234 @@
+{
+  "extName": {
+    "message": "TabPilot",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Autopilot for your browser tabs. Smart grouping, instant search, optional AI — all private.",
+    "description": "Extension description"
+  },
+  "cmdOpenSearch": {
+    "message": "Open Tab Search",
+    "description": "Command to open the search overlay"
+  },
+  "groupTabs": {
+    "message": "Group Tabs",
+    "description": "Button label to group all tabs"
+  },
+  "ungroupAll": {
+    "message": "Ungroup All",
+    "description": "Button label to ungroup all tabs"
+  },
+  "searchPlaceholder": {
+    "message": "Search tabs...",
+    "description": "Search input placeholder"
+  },
+  "noTabs": {
+    "message": "No open tabs found",
+    "description": "Empty state when no tabs"
+  },
+  "currentWindow": {
+    "message": "Current window",
+    "description": "Label for the currently focused browser window"
+  },
+  "windowLabel": {
+    "message": "Window",
+    "description": "Label prefix for non-current browser windows"
+  },
+  "noResults": {
+    "message": "No matching tabs",
+    "description": "Empty state when no search results"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings link text"
+  },
+  "analyzingTabs": {
+    "message": "Analyzing tabs...",
+    "description": "Loading state text"
+  },
+  "openSearch": {
+    "message": "Search",
+    "description": "Open search panel button"
+  },
+  "grouping": {
+    "message": "Grouping...",
+    "description": "Button state while grouping"
+  },
+  "grouped": {
+    "message": "Grouped",
+    "description": "Status when tabs are grouped"
+  },
+  "groups": {
+    "message": "groups",
+    "description": "Groups count label"
+  },
+  "categorized": {
+    "message": "categorized",
+    "description": "Categorized count label"
+  },
+  "tabs": {
+    "message": "tabs",
+    "description": "Tabs count label"
+  },
+  "open": {
+    "message": "OPEN",
+    "description": "Badge for open tabs in search"
+  },
+  "results": {
+    "message": "results",
+    "description": "Search results count label"
+  },
+  "typeToSearch": {
+    "message": "Type to search your tabs",
+    "description": "Empty search prompt"
+  },
+  "aiConfig": {
+    "message": "AI Configuration",
+    "description": "AI settings section title"
+  },
+  "optional": {
+    "message": "Optional",
+    "description": "Optional label"
+  },
+  "enableAI": {
+    "message": "Enable AI-enhanced classification",
+    "description": "AI toggle label"
+  },
+  "provider": {
+    "message": "Provider",
+    "description": "AI provider label"
+  },
+  "apiKey": {
+    "message": "API Key",
+    "description": "API key input label"
+  },
+  "endpoint": {
+    "message": "Endpoint URL",
+    "description": "Custom endpoint label"
+  },
+  "model": {
+    "message": "Model",
+    "description": "Model input label"
+  },
+  "testConnection": {
+    "message": "Test Connection",
+    "description": "Test connection button"
+  },
+  "testing": {
+    "message": "Testing...",
+    "description": "Testing connection state"
+  },
+  "connected": {
+    "message": "Connected",
+    "description": "Connection test success"
+  },
+  "failed": {
+    "message": "Failed",
+    "description": "Connection test failure"
+  },
+  "save": {
+    "message": "Save Settings",
+    "description": "Save button"
+  },
+  "saved": {
+    "message": "Saved",
+    "description": "Saved confirmation"
+  },
+  "apiKeyNote": {
+    "message": "Your API key is stored locally and never sent to any server except the AI provider.",
+    "description": "API key privacy note"
+  },
+  "groupWork": {
+    "message": "Work",
+    "description": "Tab group label: Work"
+  },
+  "groupDev": {
+    "message": "Development",
+    "description": "Tab group label: Development"
+  },
+  "groupLearn": {
+    "message": "Learning",
+    "description": "Tab group label: Learning"
+  },
+  "groupSocial": {
+    "message": "Social",
+    "description": "Tab group label: Social"
+  },
+  "groupMedia": {
+    "message": "Entertainment",
+    "description": "Tab group label: Entertainment"
+  },
+  "groupShop": {
+    "message": "Shopping",
+    "description": "Tab group label: Shopping"
+  },
+  "groupDocs": {
+    "message": "Docs",
+    "description": "Tab group label: Docs"
+  },
+  "groupOther": {
+    "message": "Other",
+    "description": "Tab group label: Other"
+  },
+  "shortcutTitle": {
+    "message": "Keyboard Shortcut",
+    "description": "Shortcut settings section title"
+  },
+  "changeShortcut": {
+    "message": "Change",
+    "description": "Button to open Chrome shortcut settings"
+  },
+  "closeGroup": {
+    "message": "Close Group",
+    "description": "Button to close all tabs in a group"
+  },
+  "expandAll": {
+    "message": "Expand All",
+    "description": "Button to expand all groups in a window"
+  },
+  "collapseAll": {
+    "message": "Collapse All",
+    "description": "Button to collapse all groups in a window"
+  },
+  "hideGroupTitles": {
+    "message": "Hide group labels in tab bar",
+    "description": "Button to hide group title text in Chrome tab bar"
+  },
+  "showGroupTitles": {
+    "message": "Show group labels in tab bar",
+    "description": "Button to show group title text in Chrome tab bar"
+  },
+  "displaySettings": {
+    "message": "Display",
+    "description": "Display settings section title"
+  },
+  "groupIndicatorStyle": {
+    "message": "Group Indicator Style",
+    "description": "Group indicator style setting label"
+  },
+  "styleHeader": {
+    "message": "Classic",
+    "description": "Classic style indicator option"
+  },
+  "styleBar": {
+    "message": "Minimal",
+    "description": "Minimal style indicator option"
+  },
+  "smartGroupTitle": {
+    "message": "Smart Group Title",
+    "description": "Smart group title toggle label"
+  },
+  "smartGroupTitleDesc": {
+    "message": "Always keep group title visible regardless of collapse state",
+    "description": "Smart group title toggle description"
+  },
+  "classifyNewTabs": {
+    "message": "Classify New",
+    "description": "Button to classify new ungrouped tabs into existing AI groups"
+  },
+  "classifyingNewTabs": {
+    "message": "Classifying...",
+    "description": "Button state while classifying new tabs"
+  }
+}

@@ -1,0 +1,374 @@
+:host {
+  all: initial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1D1D1F;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.atm-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.atm-container {
+  position: relative;
+  max-width: 580px;
+  margin: 80px auto 0;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px -16px rgba(0, 0, 0, 0.18), 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.atm-input-wrap {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+}
+
+.atm-search-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  color: #AEAEB2;
+  flex-shrink: 0;
+}
+
+.atm-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: #1D1D1F;
+  font-family: inherit;
+}
+
+.atm-input::placeholder {
+  color: #AEAEB2;
+}
+
+.atm-shortcut {
+  font-size: 10px;
+  color: #AEAEB2;
+  background: #F5F5F7;
+  padding: 2px 7px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.atm-results {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.atm-results:empty {
+  display: none;
+}
+
+.atm-empty {
+  padding: 28px 16px;
+  text-align: center;
+  color: #AEAEB2;
+  font-size: 13px;
+}
+
+.atm-result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-radius: 0;
+}
+
+.atm-result-item:hover,
+.atm-result-item.atm-selected {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.atm-favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.atm-favicon-placeholder {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: #F5F5F7;
+  flex-shrink: 0;
+}
+
+.atm-result-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.atm-result-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1D1D1F;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.atm-result-url {
+  font-size: 11px;
+  color: #AEAEB2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.atm-badge {
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.atm-badge-open {
+  background: rgba(52, 199, 89, 0.12);
+  color: #34C759;
+}
+
+.atm-badge-history {
+  background: #F5F5F7;
+  color: #86868B;
+}
+
+.atm-highlight {
+  background: rgba(0, 122, 255, 0.12);
+  color: #007AFF;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.atm-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.06);
+  font-size: 11px;
+  color: #AEAEB2;
+}
+
+.atm-footer kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  background: #F5F5F7;
+  border: 0.5px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: inherit;
+}
+
+/* ─── Scrollbar ─── */
+
+.atm-results::-webkit-scrollbar {
+  width: 5px;
+}
+
+.atm-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.atm-results::-webkit-scrollbar-thumb {
+  background: #AEAEB2;
+  border-radius: 10px;
+}
+
+/* ─── Dark Mode ─── */
+
+@media (prefers-color-scheme: dark) {
+  :host {
+    color: #F5F5F7;
+  }
+
+  .atm-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .atm-container {
+    background: #1C1C1E;
+    box-shadow: 0 24px 80px -16px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.08);
+  }
+
+  .atm-input-wrap {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .atm-input {
+    color: #F5F5F7;
+  }
+
+  .atm-input::placeholder {
+    color: #636366;
+  }
+
+  .atm-shortcut {
+    background: #2C2C2E;
+    color: #636366;
+  }
+
+  .atm-result-item:hover,
+  .atm-result-item.atm-selected {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .atm-favicon-placeholder {
+    background: #2C2C2E;
+  }
+
+  .atm-result-title {
+    color: #F5F5F7;
+  }
+
+  .atm-result-url {
+    color: #636366;
+  }
+
+  .atm-badge-open {
+    background: rgba(48, 209, 88, 0.15);
+    color: #30D158;
+  }
+
+  .atm-badge-history {
+    background: #2C2C2E;
+    color: #98989D;
+  }
+
+  .atm-highlight {
+    background: rgba(10, 132, 255, 0.15);
+    color: #0A84FF;
+  }
+
+  .atm-footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .atm-footer kbd {
+    background: #2C2C2E;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .atm-empty {
+    color: #636366;
+  }
+
+  .atm-results::-webkit-scrollbar-thumb {
+    background: #636366;
+  }
+}
+
+/* ─── Data-theme attribute for manual theme override ─── */
+
+:host([data-theme="dark"]) {
+  color: #F5F5F7;
+}
+
+:host([data-theme="dark"]) .atm-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+:host([data-theme="dark"]) .atm-container {
+  background: #1C1C1E;
+  box-shadow: 0 24px 80px -16px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.08);
+}
+
+:host([data-theme="dark"]) .atm-input-wrap {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+:host([data-theme="dark"]) .atm-input {
+  color: #F5F5F7;
+}
+
+:host([data-theme="dark"]) .atm-input::placeholder {
+  color: #636366;
+}
+
+:host([data-theme="dark"]) .atm-shortcut {
+  background: #2C2C2E;
+  color: #636366;
+}
+
+:host([data-theme="dark"]) .atm-result-item:hover,
+:host([data-theme="dark"]) .atm-result-item.atm-selected {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+:host([data-theme="dark"]) .atm-favicon-placeholder {
+  background: #2C2C2E;
+}
+
+:host([data-theme="dark"]) .atm-result-title {
+  color: #F5F5F7;
+}
+
+:host([data-theme="dark"]) .atm-result-url {
+  color: #636366;
+}
+
+:host([data-theme="dark"]) .atm-badge-open {
+  background: rgba(48, 209, 88, 0.15);
+  color: #30D158;
+}
+
+:host([data-theme="dark"]) .atm-badge-history {
+  background: #2C2C2E;
+  color: #98989D;
+}
+
+:host([data-theme="dark"]) .atm-highlight {
+  background: rgba(10, 132, 255, 0.15);
+  color: #0A84FF;
+}
+
+:host([data-theme="dark"]) .atm-footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:host([data-theme="dark"]) .atm-footer kbd {
+  background: #2C2C2E;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:host([data-theme="dark"]) .atm-empty {
+  color: #636366;
+}
+
+:host([data-theme="dark"]) .atm-results::-webkit-scrollbar-thumb {
+  background: #636366;
+}

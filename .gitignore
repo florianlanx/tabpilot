@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+*.log
+*.zip
+
+# IDE / AI tooling (not published)
+.claude/
+.cursor/
+.vscode/
+CLAUDE.md
+TODO.md

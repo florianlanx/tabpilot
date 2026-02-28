@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Apple-inspired Design Tokens ─── */
+
+:root {
+  color-scheme: light dark;
+
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F7;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+  --text-tertiary: #AEAEB2;
+  --border: rgba(0, 0, 0, 0.06);
+  --accent: #007AFF;
+  --accent-soft: rgba(0, 122, 255, 0.1);
+  --hover: rgba(0, 0, 0, 0.04);
+
+  --shadow-xs: 0 0.5px 1px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0.5px 1px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 0 0.5px rgba(0, 0, 0, 0.04);
+
+  --group-blue: #007AFF;
+  --group-green: #34C759;
+  --group-purple: #AF52DE;
+  --group-cyan: #5AC8FA;
+  --group-red: #FF3B30;
+  --group-yellow: #FF9F0A;
+  --group-pink: #FF2D55;
+  --group-grey: #8E8E93;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --bg-primary: #000000;
+  --bg-secondary: #1C1C1E;
+  --bg-elevated: #2C2C2E;
+  --text-primary: #F5F5F7;
+  --text-secondary: #98989D;
+  --text-tertiary: #636366;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #0A84FF;
+  --accent-soft: rgba(10, 132, 255, 0.15);
+  --hover: rgba(255, 255, 255, 0.06);
+
+  --shadow-xs: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25), 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 0.5px rgba(255, 255, 255, 0.06);
+
+  --group-blue: #0A84FF;
+  --group-green: #30D158;
+  --group-purple: #BF5AF2;
+  --group-cyan: #64D2FF;
+  --group-red: #FF453A;
+  --group-yellow: #FFD60A;
+  --group-pink: #FF375F;
+  --group-grey: #98989D;
+}
+
+/* ─── Base Styles ─── */
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ─── */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 10px;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* ─── Focus Ring ─── */
+
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* ─── Selection ─── */
+
+::selection {
+  background: var(--accent-soft);
+}
+
+/* ─── Transitions ─── */
+
+button, a, input, select {
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ─── Mark Highlight ─── */
+
+mark {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* ─── Expand/collapse animation helper ─── */
+
+.collapse-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.collapse-grid.expanded {
+  grid-template-rows: 1fr;
+}
+
+.collapse-grid > div {
+  overflow: hidden;
+}
