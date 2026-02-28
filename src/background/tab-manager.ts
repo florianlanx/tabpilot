@@ -39,7 +39,8 @@ async function retryTabOperation<T>(fn: () => Promise<T>): Promise<T> {
 
 async function getSettings(): Promise<ExtensionSettings> {
   const data = await chrome.storage.local.get(STORAGE_KEYS.SETTINGS)
-  return { ...DEFAULT_SETTINGS, ...data[STORAGE_KEYS.SETTINGS] }
+  const saved = (data[STORAGE_KEYS.SETTINGS] ?? {}) as Partial<ExtensionSettings>
+  return { ...DEFAULT_SETTINGS, ...saved }
 }
 
 function tabsFromChrome(

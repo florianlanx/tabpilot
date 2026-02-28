@@ -8,7 +8,7 @@ const MAX_HISTORY_ENTRIES = 500
  */
 export async function loadHistory(): Promise<Map<string, TabHistoryEntry>> {
   const data = await chrome.storage.local.get(STORAGE_KEYS.TAB_HISTORY)
-  const entries: TabHistoryEntry[] = data[STORAGE_KEYS.TAB_HISTORY] || []
+  const entries = (data[STORAGE_KEYS.TAB_HISTORY] ?? []) as TabHistoryEntry[]
   const map = new Map<string, TabHistoryEntry>()
   for (const entry of entries) {
     map.set(entry.url, entry)
