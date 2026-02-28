@@ -5,8 +5,11 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Type check
+        run: pnpm typecheck
+
       - name: Run tests
         run: pnpm test
 
@@ -31,13 +37,18 @@ jobs:
       - name: Package extension
         run: |
           cd dist
-          zip -r ../tabpilot.zip . -x "*.DS_Store" ".vite/*"
-          cd ..
+          zip -r ../tabpilot-${GITHUB_REF_NAME}.zip . -x "*.DS_Store" ".vite/*"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: tabpilot.zip
+          name: TabPilot ${{ github.ref_name }}
+          files: tabpilot-${{ github.ref_name }}.zip
           generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            ## Install
+
+            1. Download `tabpilot-${{ github.ref_name }}.zip` below
+            2. Unzip to a folder
+            3. Open `chrome://extensions` → enable **Developer Mode**
+            4. Click **Load unpacked** → select the unzipped folder

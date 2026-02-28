@@ -82,7 +82,18 @@ Full English and Chinese (简体中文) support. Automatically matches your Chro
 
 *(Coming soon)*
 
+### From GitHub Releases (Recommended)
+
+1. Go to the [Releases](https://github.com/florianlanx/tabpilot/releases) page and download the latest `tabpilot-vX.X.X.zip`
+2. Unzip to a folder
+3. Open `chrome://extensions` and enable **Developer Mode** (top right toggle)
+4. Click **Load unpacked** and select the unzipped folder
+5. Done! Pin TabPilot to the toolbar for quick access
+
 ### Build from Source
+
+<details>
+<summary>For developers who want to build from source</summary>
 
 ```bash
 git clone https://github.com/florianlanx/tabpilot.git
@@ -92,6 +103,8 @@ pnpm build
 ```
 
 Then load `dist/` as an unpacked extension in `chrome://extensions` (enable Developer Mode).
+
+</details>
 
 ## Why TabPilot
 

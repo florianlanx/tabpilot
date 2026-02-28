@@ -82,7 +82,18 @@ AI 分组后，新打开的标签自动收集到"New Tabs"组。一键用 AI 将
 
 *（即将上架）*
 
+### 从 GitHub Releases 下载（推荐）
+
+1. 前往 [Releases](https://github.com/florianlanx/tabpilot/releases) 页面，下载最新的 `tabpilot-vX.X.X.zip`
+2. 解压到一个文件夹
+3. 打开 `chrome://extensions`，开启右上角的**开发者模式**
+4. 点击**加载已解压的扩展程序**，选择解压后的文件夹
+5. 完成！将 TabPilot 固定到工具栏方便使用
+
 ### 从源码构建
+
+<details>
+<summary>适合想要自行构建的开发者</summary>
 
 ```bash
 git clone https://github.com/florianlanx/tabpilot.git
@@ -92,6 +103,8 @@ pnpm build
 ```
 
 然后在 `chrome://extensions` 中加载 `dist/` 目录（需开启开发者模式）。
+
+</details>
 
 ## 为什么选择 TabPilot
 
